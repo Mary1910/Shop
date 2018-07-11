@@ -1,7 +1,7 @@
 package it.accenture.model;
 
 public enum TipoSpedizione {
-
+//commento
 	IN_GIORNATA(10),
 	NORMALE(5),
 	GRATUITA(0);
