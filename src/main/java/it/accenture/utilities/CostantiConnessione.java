@@ -1,5 +1,5 @@
 package it.accenture.utilities;
-
+// CIAO IO SONO UN COMMENTO INUTILE
 public class CostantiConnessione {
 	public static final String DB_USERNAME = "shop";
 	public static final String DB_PASSWORD= "shop";
