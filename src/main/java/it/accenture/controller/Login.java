@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import it.accenture.dao.UtenteDaoImpl;
 import it.accenture.model.Utente;
-
+//commento
 public class Login extends HttpServlet {
 
 	@Override
