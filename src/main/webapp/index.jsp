@@ -1,7 +1,11 @@
-<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    
+    
+    
+    
+    
+    
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -15,18 +19,23 @@
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 
-
 <body>
+
+
 
 <nav class="nav navbar-default">
 <div class="navbar-header">
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
+
 <li><a href="index.jsp" class="navbar-brand">Home</a></li>
 
-<li><a>Login</a></li>
-<li><a>Registrati</a></li>
-<li><a>Carrello</a></li>
+<li><a href="login.jsp" class="navbar-brand">Login</a></li>
+
+
+<li><a href="registrazione.jsp" class="navbar-brand">Registrati</a></li>
+<li><a href="carello.jsp" class="navbar-brand">Carrello</a></li>
+
 </ul>
 </div>
 
@@ -39,6 +48,8 @@
 </div>
 
 </nav>
+
+
 
 <div class="container">
 
@@ -74,7 +85,7 @@
 
 </div><!-- immagini -->
 
-<!-- indicatoriiii -->
+<!-- indicatori -->
 
 <ol class="carousel-indicators">
 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -92,17 +103,7 @@
 <span class="fa fa-hand-o-right"></span></a>
 
 </div><!-- carousel -->
-<!-- ciao -->
+
 </div><!-- chiusura container -->
 </body>
 </html>
-
-
-
-
-
-
-</body>
-</html>
-=======
->>>>>>> branch 'master' of https://github.com/Mary1910/Shop
