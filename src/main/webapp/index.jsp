@@ -73,7 +73,7 @@
 
 </div><!-- immagini -->
 
-<!-- indicatori -->
+<!-- indicatoriiii -->
 
 <ol class="carousel-indicators">
 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
