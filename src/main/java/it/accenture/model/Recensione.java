@@ -1,6 +1,7 @@
 package it.accenture.model;
 
 public class Recensione {
+<<<<<<< HEAD
 
 	private String titolo;
 	private String contenuto;
@@ -43,4 +44,43 @@ public class Recensione {
 	
 	
 	
+=======
+	
+	private String titolo;
+	private String contenuto;
+	private int idUtente;
+	private int idProdotto;
+	
+	public String getTitolo() {
+		return titolo;
+	}
+	@Override
+	public String toString() {
+		return "Recensione [titolo=" + titolo + ", contenuto=" + contenuto + ", idUtente=" + idUtente + ", idProdotto="
+				+ idProdotto + "]";
+	}
+	public void setTitolo(String titolo) {
+		this.titolo = titolo;
+	}
+	public String getContenuto() {
+		return contenuto;
+	}
+	public void setContenuto(String contenuto) {
+		this.contenuto = contenuto;
+	}
+	public int getIdUtente() {
+		return idUtente;
+	}
+	public void setIdUtente(int idUtente) {
+		this.idUtente = idUtente;
+	}
+	public int getIdProdotto() {
+		return idProdotto;
+	}
+	public void setIdProdotto(int idProdotto) {
+		this.idProdotto = idProdotto;
+	}
+	
+
+>>>>>>> branch 'master' of https://github.com/Mary1910/Shop
 }

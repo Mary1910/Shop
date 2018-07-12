@@ -6,7 +6,11 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry excluding="java/|resources/" kind="src" path="src/main"/>
+=======
+	<classpathentry excluding="main/java/|main/resources/|test/java/|main/" kind="src" path="src"/>
+>>>>>>> branch 'master' of https://github.com/Mary1910/Shop
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
