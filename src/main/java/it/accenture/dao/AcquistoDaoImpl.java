@@ -59,7 +59,7 @@ public class AcquistoDaoImpl implements AcquistoDao {
 	
 	
 	
-	
+	//oibò
 	public void close() {
 		if (connection != null) {
 			try {
