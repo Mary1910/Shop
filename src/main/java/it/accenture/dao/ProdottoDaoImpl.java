@@ -40,6 +40,7 @@ public class ProdottoDaoImpl implements ProdottoDao {
 	
 	
     //2 - metodo che permette di selezioneare i prodotti in offerta
+	
 	public List<Prodotto> GetByOfferta(boolean offerta) {
 		List<Prodotto> listaProdotti = new ArrayList<Prodotto>();
 		String query="select * from prodotto where offerta=1";
@@ -130,6 +131,7 @@ public class ProdottoDaoImpl implements ProdottoDao {
 	}
 
 	//metodo che restituisce gli acquisti di un utente (da richiamare nella pagina personale)
+	
 	public List<Acquisto> getListaAcquisti(int idUtente) {
 		
 		List<Acquisto> listaAcquisti = new ArrayList<Acquisto>();
@@ -174,7 +176,7 @@ public class ProdottoDaoImpl implements ProdottoDao {
 		return listaAcquisti;
 	}
 	
-	//metodo che restituisce la lista degli ordini = tutti i prodotti acqistati da un utente (prodotti che sono nel carrello)
+	//metodo che restituisce la lista degli ordini = tutti i prodotti acquistati da un utente (prodotti che sono nel carrello)
 
 	public List<Prodotto> getListaOrdini(int idUtente) {
 		List<Prodotto> listaOrdini = new ArrayList<Prodotto>();
@@ -258,7 +260,7 @@ public class ProdottoDaoImpl implements ProdottoDao {
 	//metodo per recuperare tutti i prodotti disponibili
 	public List<Prodotto> getProdottiDisponibili() {
 		List<Prodotto> listaProdotti = new ArrayList<Prodotto>();
-		String query="select * from prodotto where quantitaDisponibile = 0";
+		String query="select * from prodotto where quantitaDisponibile <> 0";
 		ResultSet resultSet = null;
 		
 		try {
@@ -351,7 +353,26 @@ public class ProdottoDaoImpl implements ProdottoDao {
 		
 	}
 
+	
+	//permette di eliminare un prodotto tramite l'idProdotto
 	public void eliminaProdotto(int idProdotto) {
+		String query="select * from prodotto where idProdotto = ?";
+		
+		try {
+			prepared = connection.prepareStatement(query);
+			prepared.setInt(1, idProdotto);
+			prepared.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (prepared != null) {
+				try {
+					prepared.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 		
 		
 	}
@@ -365,21 +386,55 @@ public class ProdottoDaoImpl implements ProdottoDao {
 	public List<Recensione> gestisciRecensione(int idUtente) {
 		return null;
 		
-		
+		 
 	}
 
 	public void cancellaUtente(int idUtente) {
+    String query="select * from utente where idUtente = ?";
+		
+		try {
+			prepared = connection.prepareStatement(query);
+			prepared.setInt(1, idUtente);
+			prepared.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (prepared != null) {
+				try {
+					prepared.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		
 		
 		
 	}
 
-	public Prodotto updateImmagine(int idProdotto) {
-		return null;
+	public void updateImmagine(String immagine, int idProdotto) {
+		String query = "update prodotto set immagine = ? where idProdotto = ?";
+		
+		try {
+			prepared = connection.prepareStatement(query);
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
 		
 		
 	}
 
 	public void close() {
+		if (connection != null) {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 		
 		
 	}
